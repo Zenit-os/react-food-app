@@ -1,38 +1,352 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f8f8;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 0.5rem;
+  height: 100vh;
+}
+
+header .header-img {
+  width: 100%;
+  align-self: center;
+}
+
+header .header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+header .content-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+header .content-main h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+header .content-main button {
+  background-color: #000;
+  color: #fff;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+header .content-main p {
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.logo {
+  min-width: fit-content;
+}
+
+.logo img {
+  width: 3rem;
+  margin-right: 0.7rem;
+}
+
+.logo > div a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo > div span {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.logo p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+main {
+  padding-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  grid-row-gap: 5rem;
+}
+
+.item {
+  max-width: 250px;
+  padding: 0 0.8rem 0.8rem 0.8rem;
+  background-color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.item img {
+  margin-top: -3.5rem;
+  height: 130px;
+  object-fit: contain;
+}
+
+.item .item-foot-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.item .item-foot-desc p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.item .item-foot-desc button {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+  border-radius: 20%;
+}
+
+.item .item-head-desc {
+  text-align: left;
+  flex: 1;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .head-desc-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item .head-desc-info {
+  font-size: 0.8rem;
+  color: #a0a0a0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item .foot-desc-price {
+  font-weight: 700;
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btnAddRemove {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 0.3rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background: #000;
+  color: #fff;
+}
+
+.btnAddRemove .btnAddRemove-positive,
+.btnAddRemove .btnAddRemove-negative {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  border-top: 1px solid #000;
+  margin-top: 3rem;
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+footer p {
+  font-weight: 500;
+  max-width: 800px;
+  margin-right: 0.5rem;
+}
+
+.btnCartCount {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  border-radius: 15px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 1.5rem;
+  cursor: pointer;
+  right: 1rem;
+}
+
+.btnCartCount .count {
+  position: absolute;
+  background: red;
+  top: -8px;
+  left: -9px;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.btnCartCount i {
+  transform: rotate(-45deg);
+}
+
+.cart-header {
+  padding-top: 0.5rem;
+}
+
+.orders {
+  margin: 2rem 0 0 0;
+  min-height: calc(100vh - 15rem);
+}
+
+.orders .orders-heading,
+.orders .orders-total {
+  width: 100%;
+  max-width: 600px;
+}
+
+.orders .orders-heading {
+  margin-bottom: 5.5rem;
+  border-bottom: 2px solid #000;
+}
+
+.orders .orders-total {
+  text-align: right;
+  border-top: 2px solid #000;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.emptyCart {
+  height: calc(100vh - 13.7rem);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.emptyCart img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 350px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.emptyCart button {
+  background: #000;
+  color: #fff;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  footer > p {
+    font-size: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 935px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 735px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 535px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 335px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-main h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .content-main p {
+    font-size: 0.8rem;
+  }
+  .content-main button {
+    font-size: 0.8rem;
+    width: 150px;
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
   }
 }
