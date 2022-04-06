@@ -12,7 +12,7 @@ const CartCountButton = ({ cartCount }) => {
     <Link to="/cart">
       <div className="btnCartCount">
         <div className="count">{cartCount >= 100 ? "99+" : cartCount}</div>
-        <i class="fa-solid fa-basket-shopping"></i>
+        <i className="fa-solid fa-basket-shopping"></i>
       </div>
     </Link>
   );

@@ -8,7 +8,7 @@ function EmptyCart() {
       <img src={emptyCartImg} alt="emptyCart" />
       <Link to="/">
         <button>
-          <i class="fa-solid fa-arrow-right-long"></i> Zamów
+          <i className="fa-solid fa-arrow-right-long"></i> Zamów
         </button>
       </Link>
     </div>

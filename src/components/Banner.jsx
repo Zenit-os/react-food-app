@@ -11,7 +11,7 @@ function Banner({ handleScrollMenu }) {
           <h1>Smacznie, zdrowo i szybko</h1>
           <p>Tworzymy oryginalne potrawy dzięki własnym przepisom</p>
           <button onClick={handleScrollMenu}>
-            Zobacz menu <i class="fa-solid fa-arrow-right-long"></i>
+            Zobacz menu <i className="fa-solid fa-arrow-right-long"></i>
           </button>
         </div>
       </div>
