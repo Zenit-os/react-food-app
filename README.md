@@ -1,6 +1,6 @@
 # FOOD SHOP
 
-This project was created to show some dev in JS skills as part of my portfolio.
+This project was created to show JS skills as part of my portfolio.
 Food shop app has simple functionalities such as adding products to card and making an order.
 
 # Libs used to create this project
